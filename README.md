@@ -104,64 +104,60 @@ SilkGen unique test automation methodology that provides a roadmap for the user 
 Refer to the sample Master TestPlan and Sub TestPaln file located in `\ProjectWorkingFolders\SilkTest\TestPlans\`
 Note: If a symbol is listed in a TestCase’s argument list, but is not assigned a value before the TestCase is actually called, the TestPlan editor generates a runtime error that indicates that the symbol is undefined. To avoid this error, assign the symbol a value or a ? if the data is not yet finalized.
 
-#############################################################################################################
 ##	SilkGen library functions
-#############################################################################################################
-
-
 
 #####	Internet explorer functions
 
-Function:	SG_CloseAllBrowsers function
+`Function:`	SG_CloseAllBrowsers function
 Action:		Close All Open Browsers on the machine in which the script is running.
 Syntax:		SG_CloseAllBrowsers ()
 Parameter: 	none
 Returns:	void
 
 
-Function:	SG_DeleteCookies function
+`Function:`	SG_DeleteCookies function
 Action:		Delete all Cookies on the machine in which the script is running.
 Syntax:		SG_DeleteCookies ()
 Parameter:	none
 Returns:	void
 
 
-Function:	SG_DeleteCookiesRestartBrowser function
+`Function:`	SG_DeleteCookiesRestartBrowser function
 Action:		Deletes temporary internet files and cookies and takes the browser down and back up (for IE 6.x only) on the machine in which the script is running.
 Syntax:		SG_DeleteCookiesRestartBrowser ()
 Parameter:	none
 Returns:	void
 
 
-Function: 	SG_DeleteTempInternetFiles function
+`Function:` 	SG_DeleteTempInternetFiles function
 Action:		Deletes temporary internet files and cookies (for IE 6.x only) on the machine in which the script is running.
 Syntax:		SG_DeleteTempInternetFiles ()
 Parameter:	none
 Returns:	void
 
 
-Function:	SG_FindBadImages function
+`Function:`	SG_FindBadImages function
 Action:		Errors with URL and Image info for bad images found on any of the URLs in sURLLIst.
 Syntax:		SG_FindBadImages (sURLListInFile)
 Parameter:	sURLList: The text file containing the list of URLs to check. STRING.
 Returns:	void
 
 
-Function:	IE_FindOnPage function
+`Function:`	IE_FindOnPage function
 Action:		Tests whether a string is present on the Internet Explorer page.
 Syntax:		bFound = IE_FindOnPage (sFind)
 Parameter:	sFind: The string to search for. STRING.
 Returns:	bFound: TRUE if sFind is found on the current IE page, FALSE otherwise.
 
 
-Function:	SG_PrintPage function
+`Function:`	SG_PrintPage function
 Action:		Prints the current web page.
 Syntax:		SG_PrintPage ()
 Parameter:	none
 Returns:	void
 
 
-Function:	SG_NavigateLinks function
+`Function:`	SG_NavigateLinks function
 Action:		Close All Open Browsers on the machine in which the script is running.
 Syntax: 	SG_NavigateLinks (lsLinks, wStarting, laInvokeArgs )
 Parameter: 	lsLinks: The list of link captions to click. LIST OF STRING.
@@ -170,7 +166,7 @@ Parameter: 	lsLinks: The list of link captions to click. LIST OF STRING.
 Returns:	void
 
 
-Function:	SG_PageLoadTimes function
+`Function:`	SG_PageLoadTimes function
 action:		Loads sPage iCount times and calculates the average page load time.
 Syntax:		SG_PageLoadTimes (sPage, iCount, bDetail)
 Parameter:	sPage: The URL of the web page to be timed. STRING
@@ -179,7 +175,7 @@ Parameter:	bDetail: Whether or not to print out times for each iteration. Defaul
 Returns:	void
 
 
-Function:	SG_SaveAndVerifyPageSize function
+`Function:`	SG_SaveAndVerifyPageSize function
 Action:		Saves the page size and number of objects on the current web page and verifies them against the specified maximums.
 Syntax:		SG_SaveAndVerifyPageSize (sPageName, sSavePath, sSizeCSVFile, sDetailCSVFile, [nMaxKB, iMaxObjects])
 Parameter:	sPageName: Name to use when saving the page files. STRING.
@@ -191,35 +187,35 @@ Parameter: 	nMaxKB: Threshold for maximum page size (KB). Default is 50 (optiona
 Returns:	void
 
 
-Function:	SetHtmlTableRecognition function
+`Function:`	SetHtmlTableRecognition function
 Action:		Turns on recognition of tables and sets strength in DOM browser extensions.
 Syntax:		SetHtmlTableRecognition (nStrength)
 Parameter: 	nStrength: The strength from 0 to 1. NUMBER.
 Returns:	void
 
 
-Function:  	TurnHtmlTablesOff function
+`Function:`  	TurnHtmlTablesOff function
 Action:		Turns off recognition of tables in DOM browser extensions.
 Syntax:		TurnHtmlTablesOff ()
 Parameter: 	none
 Returns:	void
 
 
-Function:  	TurnHtmlTablesOn function
+`Function:`  	TurnHtmlTablesOn function
 Action:		Turns on recognition of tables in DOM browser extensions.
 Syntax:		TurnHtmlTablesOn ()
 Parameter: 	none
 Returns:	void
 
 
-Function:  	TurnTablesOff function
+`Function:`  	TurnTablesOff function
 Action:		Turns off recognition of tables in Virtual Objects browser extensions.
 Syntax:		TurnTablesOff (wWindow)
 Parameter: 	wWindow: Window to address the turn off command to. WINDOW.
 Returns:	void
 
 
-Function:  	TurnTablesOn function
+`Function:`  	TurnTablesOn function
 Action:		Turns on recognition of tables in Virtual Objects browser extensions.
 Syntax:		TurnTablesOn (wWindow)
 Parameter: 	wWindow: Window to address the turn on command to. WINDOW.
@@ -229,7 +225,7 @@ Returns:	void
 
 #####	Operating System (windows) calls function
 
-Function:   	MakeDir function
+`Function:`   	MakeDir function
 Action:     	Makes a directory if it does not exist. Requires the parent directory to exist.
 Syntax:		MakeDir (sMakeDirPath, [bAgentProcess])
 Parameter:  	sMakeDirPath: The fully qualified path of the directory to make. STRING.
@@ -237,7 +233,7 @@ Parameter:  	bAgentProcess: TRUE if called from an agent process - default is FA
 Returns:    	void
 
 
-Function:  	DeleteDir function
+`Function:`  	DeleteDir function
 Action:     	Deletes a directory and its contents.
 Syntax:		DeleteDir (sPath, [bMakeWritable])
 Parameter: 	sPath: Fully qualified path of the directory to be deleted. STRING.
@@ -245,7 +241,7 @@ Parameter: 	bMakeWritable: If TRUE, directories files will be made writable and 
 Returns:   	void
 
 
-Function:  	DeleteFile function
+`Function:`  	DeleteFile function
 Action:     	Deletes a file if it exists.
 Syntax:		DeleteFile (sFile, [bMakeWritable])
 Parameter: 	sFile: Fully qualified file to delete. STRING
@@ -253,14 +249,14 @@ Parameter: 	bMakeWritable: If TRUE, file will be made writable and then deleted.
 Returns:   	void
 
 
-Function:  	DeleteDirFiles function
+`Function:`  	DeleteDirFiles function
 Action:     	Deletes all files in a directory. Does not delete the directory.
 Syntax:		DeleteDirFiles (sDeletePath)
 Parameter: 	sDeletePath: Fully qualified path of the directory to be cleared. STRING.
 Returns:   	void
 
 
-Function:  	CopyOverwriteFile function
+`Function:`  	CopyOverwriteFile function
 Action:     	Copies a file. If the file already exists in the destination directory, it is deleted before the copy occurs.
 Syntax:		CopyOverwriteFile (sFileToCopy, sCopyToPath, [bAgentProcess])
 Parameter: 	sFileToCopy: The fully qualified name of the file to copy from. STRING.
@@ -269,21 +265,21 @@ Parameter: 	bAgentProcess: TRUE if called from an agent process - default is FAL
 Returns:	viod
 
 
-Function:  	AttribNoReadOnly function
+`Function:`  	AttribNoReadOnly function
 Action:     	Changes the attributes of the file to not be read only.
 Syntax:		AttribNoReadOnly (sPath)
 Parameter: 	sPath: Fully qualified filename to set attributes. STRING
 Returns:   	void
 
 
-Function:	GetNTUser function
+`Function:`	GetNTUser function
 Action:		Returns the current NT user name of the windows operating system.
 Syntax:		sNTUser = GetNTUser()
 Parameter:	none
 Returns:	Returns the current NT user name in which the script is running. STRING.
 
 
-Function:	GetThisComputerName function
+`Function:`	GetThisComputerName function
 Action:		Returns the name of the computer of the windows operating system.
 Syntax:		sCompName = GetThisComputerName()
 Parameter:	none
@@ -293,7 +289,7 @@ Returns:	Returns [sCompName] name of the computer in which the script is running
 #####	Date and Time function
 
 
-Function:  	CreateCurrentDTSString function
+`Function:`  	CreateCurrentDTSString function
 Action:     	Returns a string based on current date time stamp for use in creating unique data.
 Syntax:		sDateTime = CreateCurrentDTSString ()
 Parameter: 	none
@@ -304,7 +300,7 @@ Returns:   	sDateTime: The 12-character date time stamp in mmddyyhhnnss format. 
 #####	window information function
 
 
-Function:  	WaitForWindowGone function
+`Function:`  	WaitForWindowGone function
 Action:     	Waits for a window to disappear, up to the amount of time specified.
 Syntax:		WaitForWindowGone (wToWaitFor, [iTimeout])
 Parameter: 	wVerify: The window to wait for. WINDOW.
@@ -312,14 +308,14 @@ Parameter: 	iTimeout: The amount of time to wait for the window to appear. Defau
 Returns:   	void
 
 
-Function:  	ClickCenter function
+`Function:`  	ClickCenter function
 Action:     	Clicks in the center of an object, rather than the normal top left corner.
 Syntax:		ClickCenter (wToClick)
 Parameter: 	wToClick: The window to click. WINDOW.
 Returns:   	void
 
 
-Function:  	GetCenter function
+`Function:`  	GetCenter function
 Action:     	Returns the center point of an object.
 Syntax:		pCenter = GetCenter (wCenter)
 Returns:   	pCenter: The center point of the window. POINT.
@@ -327,7 +323,7 @@ Parameter: 	wCenter: The window to locate the center of. WINDOW.
 Returns:   	void
 
 
-Function:  	ReturnObjectsOfClassX function
+`Function:`  	ReturnObjectsOfClassX function
 Action:     	Returns all object children of the specified class, both declared and dynamically instantiated.
 Syntax:		lwWindows = ReturnObjectsOfClassX (wParent, dClass, [iLevels])
 Parameter: 	wParent: The window to be searched for objects. WINDOW.
@@ -336,7 +332,7 @@ Parameter: 	iLevels: Number of levels to search for children (optional). INTEGER
 Returns:   	lwWindows: The child windows of the specified class. LIST OF WINDOW.
 
 
-Function:  	GetChildren function
+`Function:`  	GetChildren function
 Action:    	Gets the children of the specified parent window to the specified number of levels deep.
 Syntax:		lwChildren = GetChildren (wParent, iLevels)
 Parameter: 	wParent: The parent window to get the children from. WINDOW.
@@ -344,7 +340,7 @@ Parameter: 	iLevels: The number of levels to return children from.  INTEGER.
 Returns:   	lwChildren: The children of the window. LIST OF WINDOW.
 
 
-function:  	VerifyExists (wToVerify, bExpectExists, [iTimeout])
+`Function:`  	VerifyExists (wToVerify, bExpectExists, [iTimeout])
 Action:     	Verifies a specified window either does or does not exist in a given timeout.
 parameter: 	wToVerify: The window which either will or will not exist. WINDOW.
 parameter: 	bExpectExists: If TRUE, verify wToVerify exists. If FALSE, verify wToVerify does not exist. BOOLEAN
@@ -352,7 +348,7 @@ parameter: 	iTimeout: The amount of time to wait for the window to appear. Defau
 Returns:   	void
 
 
-function:  	VerifyWindowsExist (lwVerify, [iTimeout, bVerbose])
+`Function:`  	VerifyWindowsExist (lwVerify, [iTimeout, bVerbose])
 Action:    	Verifies that the specified list of windows exist.
 parameter: 	lwVerify: The list of windows to verify. LIST OF WINDOW.
 parameter: 	iTimeout: The amount of time to wait for the windows to appear. Defaults to window timeout (optional). INTEGER.
@@ -360,7 +356,7 @@ parameter: 	bVerbose: If TRUE, positive verifications are logged. Defaults to TR
 Returns:   	void
 
 
-function:  	VerifyWindowExists (wVerify, [iTimeout])
+`Function:`  	VerifyWindowExists (wVerify, [iTimeout])
 Action:     	Verifies that a specified window exists.
 parameter: 	wVerify: The window to verify. WINDOW.
 parameter: 	iTimeout: The amount of time to wait for the window to appear. Defaults to window timeout (optional). INTEGER
@@ -370,7 +366,7 @@ Returns:   	void
 #####	ERROR/SNAPSHOT function
 
 
-Function:  	LogErrorSnapBmp function
+`Function:`  	LogErrorSnapBmp function
 Action:    	Captures a bitmap of the entire screen in a date time stamped file, and then logs the specified error.
 	  	Default is the ProjectHome\SilkTest\ErrorBmps,
 		else it will be stored in the path specified in the Propertes setting.
@@ -385,35 +381,35 @@ Returns:   	void
 #####	DataType Functions
 
 
-Function:	IsEnumType function
+`Function:`	IsEnumType function
 Action:		Checks whether the data type is of type Enumerater
 Syntax:		bType = IsEnumType ( Type )
 Parameter:	Type: the data-type to be checked. DATATYPE.
 Returns:	Returns bType TRUE or FALSE. BOOLEAN.
 
 
-Function:	IsSetType function
+`Function:`	IsSetType function
 Action:		returns TRUE or FALSE if a set which contains all the members in the set domain.
 Syntax:		bSet = IsSetType ( Type )
 Parameter:	Type: The name of the set data type as defined in a type...is set declaration. DATATYPE.
 Returns:	Returns bSet TRUE or FALSE. BOOLEAN.
 
 
-Function:	ReturnDataType function
+`Function:`	ReturnDataType function
 Action:		Attempt to assign a specified datatype. If successful, return the specified datatype
 Syntax:		ReturnDataType (aValue [null])
 Parameter:	aValue: [null]. Any value of type anytype. ANYTYPE.
 Returns:	Returns the specified data-type. DATATYPE.
 
 
-Function:	GetTypeOfElem function
+`Function:`	GetTypeOfElem function
 Action:		Returns the datatype of the LIST elements
 Syntax:		lMyList = GetTypeOfElem (l)
 Parameter:	l: Used to declare a list variable. LIST.
 Returns:	Returns lMyList, the type of data that is present in the LIST. ANYTYPE.
 
 
-Function:	ResolveEnum function
+`Function:`	ResolveEnum function
 Action:		Finds an element in the Enumerater
 Syntax:		ResolveEnum (EnumType, sValue [null])
 Parameter:	EnumType: The name of the Enumerater in which the element is to be searched. DATATYPE.
@@ -421,7 +417,7 @@ Parameter:	sValue: [null]. The element to be searched in the Enumerater. STRING.
 Returns:	Returns the element if exists in the Enumerater else returns NULL. ANYTYPE.
 
 
-Function:	ResolveSet function
+`Function:`	ResolveSet function
 Action:		Finds an element in the SET.
 Syntax:		ResolveSet (SetType, sValue [null])
 Parameter:	SetType: The name of the SET datatype in which the element is to be searched. DATATYPE.
@@ -429,7 +425,7 @@ Parameter:	sValue: [null]. The element to be searched in the SET dtatype. STRING
 Returns:	Returns the element if exists in the SET else returns NULL. ANYTYPE.
 
 
-Function:	ConvertStrToType function
+`Function:`	ConvertStrToType function
 Action:		Convert a string to a specified datatype (can be STRING, NUMBER, BOOLEAN, ENUM, SET)
 Syntax:		ConvertStrToType ( sValue null, VarType)
 Parameter:	sValue : [null]. The string to convert. STRING.
@@ -441,14 +437,14 @@ Returns:	Returns the sValue in the specified type. ANYTYPE.
 #####	Excel Functions
 
 
-Function:	Excel_Connect function
+`Function:`	Excel_Connect function
 Action:		connects to the Excel sheet which is used as a database
 Syntax:		HDATABASE Excel_Connect (sFileName)
 Parameter:	sFileName: the Excel file to be connected. STRING.
 Returns:		returns the handle of excel sheet. HDATABASE.
 
 
-Function:	Excel_LoadTableRow function
+`Function:`	Excel_LoadTableRow function
 Action:		Load the particular row value from the table according to the where clause to the record using ExcelMapping
 Syntax:		Excel_LoadTableRow (aRecord, sFileName, sSheetName, lExcelMap, sWhere )
 Parameter: 	sFileName  : The Spreadsheet name along with location {Ex: C:\Sample.xls}. STRING
@@ -486,7 +482,7 @@ Example:
 
 
 
-Function:	Excel_LoadTableRows function
+`Function:`	Excel_LoadTableRows function
 Action:		Load all the row values from the table according to the where clause which is optional to the list of record using ExcelMapping
 Syntax:		Excel_LoadTableRows (laRecord, sFileName, sSheetName, lExcelMap, sWhere, nMaxRows)
 Parameter: 	sFileName  : The Spreadsheet name along with location {Ex: C:\Sample.xls}. STRING
@@ -527,7 +523,7 @@ Example:
 
 
 
-Function:	Excel_LoadTableRowsEx function
+`Function:`	Excel_LoadTableRowsEx function
 Action:		Load all the row values from more than one table (External tables) based on the SQL JOIN and the where clause (which is optional) -
 		-  The result set is stored into the list of record using ExcelMapping.
 		Note:- If sJoin is set to NULL, then you should not select any of the columns of the second table.i.e. in the Excel Mapping you you should not have any entries of the table's Column.
@@ -580,7 +576,7 @@ Example:
 
 
 
-Function:	Excel_LoadTestCase function
+`Function:`	Excel_LoadTestCase function
 Action:		Load the particular row value from the table according to the Test case ID to the record using ExcelMapping
 Syntax:		Excel_LoadTestCase (aRecord, sFileName, sSheetName, lExcelMap, sTestCaseID)
 Parameter: 	aRecord    : The Record in which the values are stored after fetching. ANYTYPE.
@@ -620,7 +616,7 @@ Example:
 
 
 
-Function:	Excel_TableRowCount function
+`Function:`	Excel_TableRowCount function
 Action:		Returns the number of rows in excel sheet based on the Pattern
 Syntax:		iCount = Excel_TableRowCount (sFileName, sSheetName, sColumnName, sPattern)
 Parameter: 	sFileName  : The Spreadsheet name along with location {Ex: C:\Sample.xls}. STRING.
@@ -638,7 +634,7 @@ Example:
 #####	DataBase Functions
 
 
-Function: 	DB_QueryAll_Any function
+`Function:` 	DB_QueryAll_Any function
 Action: 	Executes all the valid query on the given database -
 		The output of the Queries that are executed successfully are stored in the LIST OF ANYTYPE.
 		Note:-  The output will only contain the records of the First column of the Table, which is of type LIST OF ANYTYPE.
@@ -663,7 +659,7 @@ Returns:  	Returns the count of SQL query result. INTEGER
 	 //The output will only contain the records of the First column of the Table, which is of type LIST OF ANYTYPE.
 ```
 
-Function: 	DB_QueryAll_Str function
+`Function:` 	DB_QueryAll_Str function
 Action: 	Executes all the valid query on the given database -
 		The output of the Queries that are executed successfully are stored in the LIST OF ANYTYPE.
 		Note:-  The output will only contain the records of the First column of the Table, which is of type LIST OF STRING.
@@ -691,7 +687,7 @@ Example:
 
 
 
-Function: 	DB_QueryAll_ListAny function
+`Function:` 	DB_QueryAll_ListAny function
 Action: 	Executes all the valid query on the given database -
 		The output of the Queries that are executed successfully are stored in the LIST OF LIST OF ANYTYPE.
 		Note:-  The output will contain the records of all columns of the Table, which is of type LIST OF LIST OF ANYTYPE.
@@ -719,7 +715,7 @@ Example:
 
 
 
-Function: 	DB_QueryAll_ListStr function
+`Function:` 	DB_QueryAll_ListStr function
 Action: 	Executes all the valid query on the given database -
 		The output of the Queries that are executed successfully are stored in the LIST OF ANYTYPE.
 		Note:-  The output will contain the records of all columns of the Table, which is of type LIST OF LIST OF STRING.
@@ -747,7 +743,7 @@ Example:
 
 
 
-Function: 	DB_QueryFirst_Any function
+`Function:` 	DB_QueryFirst_Any function
 Action: 	Executes only the first valid query from lsSQL on the given database -
 		The output of the Query that is executed successfully is stored in aValue.
 		Note:-  The output will contain the first row's first column's value in aValue. ANYTYPE.
@@ -775,7 +771,7 @@ Example:
 
 
 
-Function: 	DB_QueryFirst_Str function
+`Function:` 	DB_QueryFirst_Str function
 Action: 	Executes only the first valid query from lsSQL on the given database -
 		The output of the Query that is executed successfully is stored in sValue.
 		Note:-  The output will contain the first row's first column's value in sValue. STRING.
@@ -803,7 +799,7 @@ Example:
 
 
 
-Function: 	DB_QueryFirst_ListAny function
+`Function:` 	DB_QueryFirst_ListAny function
 Action: 	Executes only the first valid query from lsSQL on the given database -
 		The output of the Queries that are executed successfully are stored in the laValue.
 		Note:-  The output will only contain the first row's values of the Table, which is of type LIST OF ANYTYPE.
@@ -831,7 +827,7 @@ Example:
 
 
 
-Function: 	DB_QueryFirst_ListStr function
+`Function:` 	DB_QueryFirst_ListStr function
 Action: 	Executes only the first valid query from lsSQL on the given database -
 		The output of the Queries that are executed successfully are stored in the laValue.
 		Note:-  The output will only contain the first row's values of the Table, which is of type LIST OF STRING.
@@ -859,7 +855,7 @@ Example:
 
 
 
-Function:	DB_Insert function
+`Function:`	DB_Insert function
 Action:		Insert a new row or rows in a table
 Syntax:		DB_Insert (hdb, sTable, lColumnValue)
 Parameter:	hdb	: The handle to a database connection as returned by DB_Connect. HDATABASE.
@@ -882,7 +878,7 @@ Example:
 
 
 
-Function:	DB_Update function
+`Function:`	DB_Update function
 Action:		Updates the specific column values i.e records in a table of a table
 Syntax:		DB_Update (hdb, sTable, lColumnValue, sWhere)
 Parameter:	hdb	: The handle to a database connection as returned by DB_Connect. HDATABASE.
@@ -910,7 +906,7 @@ Example:
 
 
 
-Function:	DB_Execute function
+`Function:`	DB_Execute function
 Action:		Sends a list of SQL statements to the specified database for execution.
 Syntax:		DB_Execute (hdb, lsSQL)
 Parameter:	hdb	: The handle to a database connection as returned by DB_Connect. HDATABASE.
@@ -931,7 +927,7 @@ Example:
 
 
 
-Function:  	SQ_ExecuteSQLScript function
+`Function:`  	SQ_ExecuteSQLScript function
 Action:		Excutes a SQL script on the specified database
 Syntax:		DB_ExecuteSQLScript(sODBC_ConnectString, sFilename)
 parameter: 	sODBC_ConnectString: The ODBC connection string. STRING.
@@ -947,7 +943,7 @@ Example:
 
 
 
-Function: 	DB_QueryFirst_Record function
+`Function:` 	DB_QueryFirst_Record function
 Action: 		Executes only the first valid query from lsSQL on the given database -
  			The output of the Query that is executed successfully is stored in aRecord.
  			Note:-  The output will contain the first row's first column's value in aRecord. ANYTYPE.
@@ -997,7 +993,7 @@ Example:
 
 
 
-Function: 	DB_QueryAll_Record function
+`Function:` 	DB_QueryAll_Record function
 Action: 		Executes all the valid query from lsSQL on the given database -
 			The output of the Query that are executed successfully are stored in laRecords.
 Syntax: 		iCount = DB_QueryAll_Record(hdb, lsSQL, lQueryMap, laRecords)
@@ -1045,7 +1041,7 @@ Example:
 #####	SQL Formatting functions
 
 
-Function:	SQL_Translate function
+`Function:`	SQL_Translate function
 Action:		SQL_Translate searches lsSQL list for the query sFrom. When it finds a match, it replaces sFrom with sTo.
 		All instances of sFrom in lsSQL list are replaced, and the new list is modifies with lsSQL
 Syntax:		SQL_Translate (lsSQL, sFrom, sTo)
@@ -1068,7 +1064,7 @@ Example:
 
 
 
-Function:	SQL_ListToStr function
+`Function:`	SQL_ListToStr function
 Action:		Convert LIST OF SQL queries into a single query of type STRING.
 Syntax:		sQuery = SQL_ListToStr (lsSQL)
 Parameter:	lsSQL : LIST OF SQL queries. LIST OF STRING.
@@ -1089,7 +1085,7 @@ Example:
 
 
 
-Function:	SQL_FormatList function
+`Function:`	SQL_FormatList function
 Action:		Convert each item of lsItems queries with single quotes and places a comma seprater in between each item and -
 		- returns it as a single string.
 Syntax:		sQuery = SQL_FormatList (lsItems)
@@ -1109,7 +1105,7 @@ Example:
 
 
 
-Function:	SQL_ColumnValue_Format  function
+`Function:`	SQL_ColumnValue_Format  function
 Action:		It converts the Column's Value to STRING datatype.
 Syntax:		sColValue = SQL_ColumnValue_Format (ColumnValue)
 Parameter:	ColumnValue : The SQL table Column's information. SQLCOLUMNVALUE.
@@ -1126,7 +1122,7 @@ Example:
 
 
 
-Function:	SQL_FormatInsert function
+`Function:`	SQL_FormatInsert function
 Action:		It converts the list of Column Value of a table to a SQL INSERT INTO Statement.
 Syntax:		lsInsertQuery = SQL_FormatInsert (sTable, lColumnValue)
 Parameter:	sTable : the table name of the SQL database
@@ -1149,7 +1145,7 @@ Example:
 
 
 
-Function:	SQL_FormatUpdate function
+`Function:`	SQL_FormatUpdate function
 Action:		It converts the list of Column Value of a table to a SQL UPDATE Statement.
 Syntax:		lsInsertQuery = SQL_FormatUpdate (sTable, lColumnValue)
 Parameter:	sTable : the table name of the SQL database
@@ -1175,7 +1171,7 @@ Example:
 #####	String manipulation functions
 
 
-Function:  	FieldsToList function
+`Function:`  	FieldsToList function
 Action:    	Returns the fields in a delimited string as a list of strings.
 Syntax:		lsSegments = FieldsToList (sString, sDelim, [bLogWarning])
 Parameter: 	sString: The delimited string to return the segments from. STRING.
@@ -1184,14 +1180,14 @@ Parameter: 	bLogWarning: Log a warning if sDelim not found in sString. Default i
 Returns:   	lsSegments: The returned segments. LIST OF STRING.
 
 
-Function:  	ConvertPathTo8CharFormat function
+`Function:`  	ConvertPathTo8CharFormat function
 Action:    	Converts a path to 8 char limit mode.
 Syntax:		sConvertedPath = ConvertPathTo8CharFormat (sPath)
 Parameter: 	sPath: The original path. STRING.
 Returns:   	sConvertedPath: The path converted to 8 char parts. STRING.
 
 
-Function:  	GetFieldReverse function
+`Function:`  	GetFieldReverse function
 Action:     	Returns a segment (field) of a string, working backwards from the end of the string.
 Syntax:		sSegment = GetFieldReverse (sString, sDelim, iField)
 Parameter: 	sString: The string to return a segment from. STRING.
@@ -1200,7 +1196,7 @@ Parameter: 	iField: The occurence of the field to return. INTEGER.
 Returns:   	sSegment: The returned segment. STRING.
 
 
-Function:  	FormatPrecision function
+`Function:`  	FormatPrecision function
 Action:     	Returns a string containing a real number with the specified precision.
 Syntax:		sFormatted = FormatPrecision (sToFormat, iDecimalPlaces)
 Parameter: 	sToFormat: The real number in string form. STRING.
@@ -1208,42 +1204,42 @@ Parameter: 	iDecimalPlaces: The number of decimal points precision desired. INTE
 Returns:   	sFormatted: The formatted string. STRING.
 
 
-Function:  	Round function
+`Function:`  	Round function
 Action:     	Rounds a number to the nearest integer.
 Syntax:		iRound = Round (nToRound)
 Parameter: 	nToRound: The number to round. NUMBER.
 Returns:   	iRound: The nearest integer to the number. INTEGER.
 
 
-Function:  	RoundDown function
+`Function:`  	RoundDown function
 Action:     	Rounds a number to its integer component.
 Syntax:		iRound = RoundDown (nToRound)
 Parameter: 	nToRound: The number to round. NUMBER.
 Returns:   	iRound: The integer portion of the real number. INTEGER.
 
 
-Function:	StrLen function
+`Function:`	StrLen function
 Action:		StrLen returns the number of characters in sString. If sString is an empty string (""), StrLen returns 0.
 Syntax:		iLength = StrLen ( sStr null)
 Parameter:	sStr: [null]. The string whose length to return. STRING.
 Returns:	Returns the length of a string [iLength]. INTEGER.
 
 
-Function:	StrTrim finction
+`Function:`	StrTrim finction
 Action:		Strips leading and trailing whitespace from a string.
 Syntax:		sStripped = Trim (sToStrip)
 Parameter:	sStr: [null] The string to strip. STRING.
 Returns:	Trim removes leading and trailing whitespace from a string and returns the rest of the string [sStripped]. STRING.
 
 
-Function:	StrHasValue function
+`Function:`	StrHasValue function
 Action:		Checks whether the specified string has any value or not
 Syntax:		bSttHas = StrHasValue ( sStr [null])
 Parameter:	sStr: [null]. The string to be checked. STRING.
 Returns:	Returns TRUE id the specified string is not equal to NULL or "" else returns FALSE. BOOLEAN.
 
 
-Function:	StrPadZeroes function
+`Function:`	StrPadZeroes function
 Action:		Pads zeroes at beginning of the string
 Syntax:		sNewString = StrPadZeroes ( sStr [null], nWidth)
 Parameter:	sStr: [null]. The string to be padded with leading zeroes. STRING.
@@ -1251,7 +1247,7 @@ Parameter:	nWidth: The final width of the string including the leading zeroes. I
 Returns:	Returns the string [sNewString] with the leading zeroes. STRING.
 
 
-Function:	StrPadSpaces function
+`Function:`	StrPadSpaces function
 Action:		Pads trailing whitespace characters at end of the string
 Syntax:		sNewString = StrPadSpaces ( sStr [null], nWidth)
 Parameter:	sStr: [null]. The string to be padded with trailing whitespace characters. STRING.
@@ -1259,21 +1255,21 @@ Parameter:	nWidth: The final width of the string including the trailing whitespa
 Returns:	Returns the string [sNewString] with the trailing whitespace characters. STRING.
 
 
-Function:	StrStripDecimalLeft function
+`Function:`	StrStripDecimalLeft function
 Action:		Stripts the string before the the decimal character.
 Syntax:		sNewString = StrStripDecimalLeft ( sStr [null])
 Parameter:	sStr: [null]. The string to be striped before the decimal character. STRING.
 Returns:	Returns the new string [sNewString] before the decimal character if it found, else returns the original string. STRING.
 
 
-Function:	StrStripDecimalRight function
+`Function:`	StrStripDecimalRight function
 Action:		Stripts the string after the the decimal character.
 Syntax:		sNewString = StrStripDecimalRight ( sStr [null])
 Parameter:	sStr: [null]. The string to be striped after the decimal character. STRING.
 Returns:	Returns the new string [sNewString] after the decimal charactor if it found, else returns the original string . STRING.
 
 
-Function:	StrGetLeftOfSpecialChar function
+`Function:`	StrGetLeftOfSpecialChar function
 Action:		Returns the string before a particular character(s).
 Syntax:		sNewString = StrGetLeftOfSpecialChar ( sStr [null],  sSplChar)
 Parameter:	sStr: [null]. The string to be striped before a particular character(s). STRING.
@@ -1281,7 +1277,7 @@ Parameter:	sSplChar: The special character to be searched in the original string
 Returns:	Returns the new string [sNewString] before a particular character(s) if it found, else returns an empty string (""). STRING.
 
 
-Function:	StrGetRightOfSpecialChar function
+`Function:`	StrGetRightOfSpecialChar function
 Action:		Returns the string after a particular character(s).
 Syntax:		sNewString = StrGetRightOfSpecialChar ( sStr [null],  sSplChar)
 Parameter:	sStr: [null]. The string to be striped after a particular character(s). STRING.
@@ -1289,7 +1285,7 @@ Parameter:	sSplChar: The special character to be searched in the original string
 Returns:	Returns the new string [sNewString] after a particular character(s) if it found, else returns an empty string (""). STRING.
 
 
-Function:	StrStripOutAnyChar function
+`Function:`	StrStripOutAnyChar function
 Action:		Stripts out the specified character from a given string if it has any.
 Syntax:		sNewString = StrStripOutAnyChar ( sStr [null], sAnyChar)
 Parameter:	sStr: [null]. The string to be striped for a given character. STRING.
@@ -1298,21 +1294,21 @@ Returns:	If the said character is found in the original string,
 		returns the new string [sNewString] after stripping the character from [sStr] else returns the original string. STRING.
 
 
-Function:	StrStripLeadingZeros function
+`Function:`	StrStripLeadingZeros function
 Action:		Stripts the Leading Zeros before of a string if it has any.
 Syntax:		sNewString = StrStripLeadingZeros ( sStr [null])
 Parameter:	sStr: [null]. The string to be striped for Leading Zeros of a string. STRING.
 Returns:	Returns the new string [sNewString] after stripping the Leading Zeros. STRING.
 
 
-Function:	ParseStringList function
+`Function:`	ParseStringList function
 Action:		Split the string from a delimiter and store it in a List
 Syntax:		lsNewList = ParseStringList ( sStr [null], sDelim)
 Parameter:	sStr: [null]. The string to be striped out. STRING.
 Parameter:	sDelim: The delimiter from which the string will be splited. STRING.
 Returns:	Returns sub-strings in a LIST OF STRING after parsing is done. LIST OF STRING.
 
-Function:	ParseNumber function
+`Function:`	ParseNumber function
 Action:		Parses only number from a String
 Syntax:		bParse = ParseNumber (sParse, nValue)
 Parameter:	sParse: [inout]. The original string to be parsed for a number.
