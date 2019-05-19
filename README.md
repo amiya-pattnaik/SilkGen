@@ -3,7 +3,7 @@
 
 The SilkGen Framework gives you flexible architecture upon which, either you can choose the SilkGen approach or you can choose your own approach to develop your script in SilkTest through SilkGen.
 
-#### Getting Started
+### Getting Started
 If you are a first-time user and want to get up and running quickly, make sure you have  SilkTest 8.0 or above.
 
 Here you have two paths, one is Framework path and the other one is your project working folder.
@@ -13,39 +13,48 @@ Here you have two paths, one is Framework path and the other one is your project
 `Project:` This is the location of your project working folder in your local system. This is the place holder of your all project related files. You create your windows declaration, functions, data types etc. in your .inc file and give a reference of your all .inc files in the file Project_UseFiles.inc which is located in `\ProjectWorkingFolders\SilkTest\Includes\`
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/SilkGen_project_folder.png)
 
-#### Configuration settings for application under test ( Property Settings )
+### Configuration settings for application under test ( Property Settings )
 This is the place where you need to set the configuration settings for your application under test.
 
-Target Machine:	 The machine on which you wish to run your test. This can be local machine or a remote machine in the same network. If you wish to run locally then specify it as local. If you wish to run in a remote machine, specify either the hostname or the IP address of the remote machine. This field is not optional.
+`Target Machine:`
+The machine on which you wish to run your test. This can be local machine or a remote machine in the same network. If you wish to run locally then specify it as local. If you wish to run in a remote machine, specify either the hostname or the IP address of the remote machine. This field is not optional.
 Note: If you are testing remotely, then in the remote machine the SilkTest Agent must be up and running before you start execution on it.
 
-Default Browser: The browser in which you wish to run your application. Select the appropriate browse you wish from the drop down select box. If your application is non web based applications i.e. stand alone or client server, then select the value as none from the drop down select box. This field is not optional.
+`Default Browser:`
+The browser in which you wish to run your application. Select the appropriate browse you wish from the drop down select box. If your application is non web based applications i.e. stand alone or client server, then select the value as none from the drop down select box. This field is not optional.
 
-Remote Machine Error Directory: This is the location, where the snapshots of the application errors are stored in the remote machine. If test is running in a remote machine and a testcase is failed during execution, snapshots are taken and stored in this location of the remote machine (provided you are using SilkGen test approach to test your application. Kindly refer to the SilkGen test approach for more details. If you are not using SilkGen approach then you should use LogErrorSnapBmp () function directly in your testcase/function to avail this facility.) Once the test is completed these files are copied from the remote machine to the local machine to view the errors in the in the SilkTest IDE. SilkGen will copy the files from the remote machine to the Local machine; the user should have the Admin rights in the remote machine. Otherwise it will throw the error.
+`Remote Machine Error Directory:`
+This is the location, where the snapshots of the application errors are stored in the remote machine. If test is running in a remote machine and a testcase is failed during execution, snapshots are taken and stored in this location of the remote machine (provided you are using SilkGen test approach to test your application. Kindly refer to the SilkGen test approach for more details. If you are not using SilkGen approach then you should use LogErrorSnapBmp () function directly in your testcase/function to avail this facility.) Once the test is completed these files are copied from the remote machine to the local machine to view the errors in the in the SilkTest IDE. SilkGen will copy the files from the remote machine to the Local machine; the user should have the Admin rights in the remote machine. Otherwise it will throw the error.
 
-Local Machine Error Directory: This is the location of the error.bmp directory in local machine. If a testcase is failed during execution, snapshots are taken and stored in this said location of the local machine (provided you are using SilkGen test approach to test your application. Kindly refer to the SilkGen test approach for more details. If you are not using SilkGen approach then you should use LogErrorSnapBmp () function directly in your testcase/function to avail this facility.)  This path is optional to the user. You can leave this field as blank. If you are not specifying any value over here then the default location will be
+`Local Machine Error Directory:`
+This is the location of the error.bmp directory in local machine. If a testcase is failed during execution, snapshots are taken and stored in this said location of the local machine (provided you are using SilkGen test approach to test your application. Kindly refer to the SilkGen test approach for more details. If you are not using SilkGen approach then you should use LogErrorSnapBmp () function directly in your testcase/function to avail this facility.)  This path is optional to the user. You can leave this field as blank. If you are not specifying any value over here then the default location will be
 \ProjectWorkingFolders\SilkTest\ErrorBmps\
 
-Report Type: This is the type of customize report you want to generate along with SilkTest .res file. As of this current release the various reports available are XML, TXT. Select the desired reports type to be generated. If you have selected the option as none then in that case no customized reports will be generated. (Note: If you are using SilkGen approach, then preferably select report type as none. You can view your test results in more details in SilkTest .res file in a customized way by SilkGen Driver script).
+`Report Type:`
+This is the type of customize report you want to generate along with SilkTest .res file. As of this current release the various reports available are XML, TXT. Select the desired reports type to be generated. If you have selected the option as none then in that case no customized reports will be generated. (Note: If you are using SilkGen approach, then preferably select report type as none. You can view your test results in more details in SilkTest .res file in a customized way by SilkGen Driver script).
 
-TestSet Name: This is the module or functionality name of your application under test. This field is not optional.
+`TestSet Name:`
+This is the module or functionality name of your application under test. This field is not optional.
 
-TestSet Description: This is the description or note that you want to give for application under test. This field is not optional.
+`TestSet Description:`
+This is the description or note that you want to give for application under test. This field is not optional.
 
-Debug Mode: This is to generate Log files during execution. This will have trace to all SilkGen functions/methods. Select the appropriate values (either 0 or 1) from the dropdown select box. If set to 0 (zero) then no Log files will be generated by SilkGen otherwise Log files will be generated. SilkGen will store the Log files in the `\ProjectWorkingFolders\SilkTest\Log\`
+`Debug Mode:`
+This is to generate Log files during execution. This will have trace to all SilkGen functions/methods. Select the appropriate values (either 0 or 1) from the dropdown select box. If set to 0 (zero) then no Log files will be generated by SilkGen otherwise Log files will be generated. SilkGen will store the Log files in the `\ProjectWorkingFolders\SilkTest\Log\`
 
-Results Directory: This is to redirect your SilkTest generated result files (.res) to the path specified in this field. If left blank the default location will be \ProjectWorkingFolders\SilkTest\Results\ This is optional. Preferably leave this field as blank so that your .res files will be automatically moved to above mentioned directory which is a single place holder for all result files.
+`Results Directory:`
+This is to redirect your SilkTest generated result files (.res) to the path specified in this field. If left blank the default location will be \ProjectWorkingFolders\SilkTest\Results\ This is optional. Preferably leave this field as blank so that your .res files will be automatically moved to above mentioned directory which is a single place holder for all result files.
 
-#### Load SilkGen and Launch SilkTest
+### Load SilkGen and Launch SilkTest
 Once you have done with above steps, navigate to the `Executables` folder and run/click on  the `SILKGEN_START.bat` to load SilkGen and launch SilkTest. All the SilkGen files will be automatically loaded in the SilkTest memory and SilkTest IDE will be invoked. Now you can develop/debug/execute your script in SilkTest with the help of SilkGen.
 
-#### Utilize the built in functions/methods in your AUT ( Libraries )
+### Utilize the built in functions/methods in your AUT ( Libraries )
 SilkGen provides you a wide range of built in function that you can directly use in your project to speed up your testing cycle. Varieties of functions available for Internet Explorer, HTML Table, Operating System (windows) calls, Date and Time manipulation, Window Information, Error/Snapshot, Data-Type manipulation, Excel database functions, String manipulation etc. For all libraries refer to the SilkGen_Library.txt file and source code can be found in `\Fremework\SilkTest\Includes`
 
-#### Generate customized report along with SilkTest result file ( Reports )
+### Generate customized report along with SilkTest result file ( Reports )
 If you have selected the option as XML or TEXT, in that case customized reports will be generated and this is the place from where you can view test results once execution is over. You can view the SilkGen customized report along with the SilkTest generated (.res) results file from `framework\SilkGen\ProjectWorkingFolders\SilkTest\Results`
 
-#### A Glance to Customized report
+### A Glance to Customized report
 SilkGen will generate two types of customized report either XML or TXT reports once execution is over.
 
 XMLReport: The .xml reports are designed to address the larger section of audience like QA Manager, QA Lead, Client QA Manager and Client QA Lead, Project Manager etc... This will give you the detailed statistics of your testing. Anybody can view this result file across the globe on any platform on any browser. This has many bigger advantages in compare to SilkTest generated .res file. Such as, to view the .res file you need to have SilkTest installed on your machine (which requires a license cost), you can measure the individual testcase execution time (performance of each testcase), other information like when, which OS, who executed, actual error information, error in which module, which function, which line and many more in this report. The XML report is very light weight in compare to .RES file or .HTML. You can view this report on any platform on any browser. Below are the snapshots of one complete .XML report.
@@ -57,7 +66,7 @@ Note: The .XML files are generated based on the time stamp for example 160609_18
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/SilkGen_report3.png)
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/SilkGen_report4.png)
 
-#### Folder Structure
+### Folder Structure
 `Framework:` This is the location of the SilkGen framework in your local system.
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/SilkGen_framework_folder.png)
 
@@ -66,37 +75,37 @@ Note: The .XML files are generated based on the time stamp for example 160609_18
 
 You don’t have to do anything with the Framework Folders / Files, only you have to deal with the Folders / Files that are available in the `\ProjectWorkingFolders\SilkTest.` This is the complete place holder for your project.
 
-##### Data:
+#### Data:
 All the test data are stored in this location. You can have one or more Excel files as test data in this Data folder. For example, In MMS module the test data excel sheet would be MMS.xls and so on for the rest of the modules. You can have multiple sheets in one Excel file too.
 
-##### ErrorBmps:
+#### ErrorBmps:
 If a testcase is failed during execution, snapshots are taken and stored in this location of the local machine.
 
-##### Includes:
+#### Includes:
 All Window declarations, Methods, Functions, Object descriptions etc. specific to each window of your project / application are maintained over here. Include all your project related .inc files through USE statement in the Project_UseFiles.inc which is the startup file for your application under test. No need to include all your .inc files through Options -> Runtime -> UseFiles dialog.
 
-##### INIFiles:
+#### INIFiles:
 In automation, INI Files are used to store the intermediate data generated during execution of testcases. These intermediate data are used for verification purpose. The INI Files are generated by the scripts when parse function is called. Once INI File is generated, the parse function will get all the required data from the application and store it in the file. These stored data are the actual data and they are compared with the expected data (Fetched from the test data spread sheet).  You can store all project related .INI files in this location.
 
-##### Log:
+#### Log:
 If you have selected debug mode as 1 from the dropdown select box in SilkGen, then Log files will be generated by SilkGen and will be available here. This will have trace to all SilkGen functions / methods.
 
-##### OptionSets:
+#### OptionSets:
 One or more option sets file can be created for your project and stored in this folder. An option set is opened on a test machine to automatically set the options required to successfully run a set of tests. For example you can have the main optionset file as YourProjectName_OptionSet.opt.
 
-##### Results:
+#### Results:
 Results folder will have result file in the form of .XML, .TXT, .RES
 Scripts: Scripts folder holds the entire script file that is being used by your project. You can keep any number of script files in this folder.
 
-##### TestPlans:
+#### TestPlans:
 TestPlans folder will have single Master Test Plan and multiple Sub-Plans corresponding to each module. For example YourProjectName_Master.pln is the Master Test Plan and the sub-plans will be in the name of each module for ex.Login.pln etc.
 
 #### The SilkGen Approach
 
 SilkGen unique test automation methodology that provides a roadmap for the user on how to choose, plan and develop a test automation project. The SilkGen approach also provides architecture upon which to build efficient data-driven tests. The SilkGen approach is completely based on the SilkTest’s symbols which are the most advanced concept in SilkTest. Use symbols to define data that is shared by a group of tests in the TestPlan file. The data can be your application function name, method name, string etc. These data are passed to the SilkGen’s Driver function. The symbol name can be any valid 4Test identifier name, but must begin with the $ character. The symbol value can be any text. When the TestPlan editor encounters the symbol, it expands it (in the same sense that another language expands). For example, the following TestPlan editor statement (1) defines a symbol named Color and assigns it the STRING value "Red" (2) defines a symbol named CloseAllBrowsers and assigns it the Function name “IE_CloseAllBrowsers" etc.
 ```
-	$Color = "Red"
-  $CloseAllBrowsers	 = {"IE_CloseAllBrowsers", {}}
+$Color = "Red"
+	$CloseAllBrowsers	 = {"IE_CloseAllBrowsers", {}}
   $CheckHeaderFooter = {"HeaderAndFooter", {$sSpreadsheet, $sSheet, $sTestCaseID}}
 
 ```
@@ -104,9 +113,9 @@ SilkGen unique test automation methodology that provides a roadmap for the user 
 Refer to the sample Master TestPlan and Sub TestPaln file located in `\ProjectWorkingFolders\SilkTest\TestPlans\`
 Note: If a symbol is listed in a TestCase’s argument list, but is not assigned a value before the TestCase is actually called, the TestPlan editor generates a runtime error that indicates that the symbol is undefined. To avoid this error, assign the symbol a value or a ? if the data is not yet finalized.
 
-##	SilkGen library functions
+###	SilkGen Library Functions
 
-#####	Internet explorer functions
+####	Internet explorer functions
 
 `Function:`	SG_CloseAllBrowsers function
 Action:		Close All Open Browsers on the machine in which the script is running.
@@ -221,9 +230,7 @@ Syntax:		TurnTablesOn (wWindow)
 Parameter: 	wWindow: Window to address the turn on command to. WINDOW.
 Returns:	void
 
-
-
-#####	Operating System (windows) calls function
+####	Operating System (windows) calls function
 
 `Function:`   	MakeDir function
 Action:     	Makes a directory if it does not exist. Requires the parent directory to exist.
@@ -285,9 +292,7 @@ Syntax:		sCompName = GetThisComputerName()
 Parameter:	none
 Returns:	Returns [sCompName] name of the computer in which the script is running. STRING.
 
-
-#####	Date and Time function
-
+####	Date and Time function
 
 `Function:`  	CreateCurrentDTSString function
 Action:     	Returns a string based on current date time stamp for use in creating unique data.
@@ -296,9 +301,7 @@ Parameter: 	none
 Returns:   	sDateTime: The 12-character date time stamp in mmddyyhhnnss format. STRING.
 
 
-
-#####	window information function
-
+####	window information function
 
 `Function:`  	WaitForWindowGone function
 Action:     	Waits for a window to disappear, up to the amount of time specified.
@@ -363,8 +366,7 @@ parameter: 	iTimeout: The amount of time to wait for the window to appear. Defau
 Returns:   	void
 
 
-#####	ERROR/SNAPSHOT function
-
+####	ERROR/SNAPSHOT function
 
 `Function:`  	LogErrorSnapBmp function
 Action:    	Captures a bitmap of the entire screen in a date time stamped file, and then logs the specified error.
@@ -376,10 +378,7 @@ Parameter: 	sErrorString: Informational message to be used in logging the error.
 Parameter: 	bHaltTestcase: Switch that specifies whether to halt the testcase on error. Default is FALSE (optional). BOOLEAN
 Returns:   	void
 
-
-
-#####	DataType Functions
-
+####	DataType Functions
 
 `Function:`	IsEnumType function
 Action:		Checks whether the data type is of type Enumerater
@@ -433,9 +432,7 @@ Parameter:	VarType : Explicit type conversions require (Ex. STRING, NUMBER, BOOL
 Returns:	Returns the sValue in the specified type. ANYTYPE.
 
 
-
-#####	Excel Functions
-
+####	Excel Functions
 
 `Function:`	Excel_Connect function
 Action:		connects to the Excel sheet which is used as a database
@@ -479,7 +476,6 @@ Example:
 	Excel_LoadTableRow (ExcelColumnData, sFileName, sSheet, lExcelMap, "CUSTNO = 1001")
 
 	Print(ExcelColumnData)
-
 
 
 `Function:`	Excel_LoadTableRows function
@@ -631,7 +627,7 @@ Example:
 
 
 
-#####	DataBase Functions
+####	DataBase Functions
 
 
 `Function:` 	DB_QueryAll_Any function
