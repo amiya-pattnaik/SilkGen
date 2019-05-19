@@ -1,0 +1,33 @@
+[ ] 
+[+] Home Page
+	[ ] $lfTest			= {}
+	[ ] $lfVerify 		= {$VerifyHomePage}
+	[ ] 
+	[ ] #$sTestCaseID	= "TC_01"
+[+] Header Elements
+	[ ] $lfTest			= {$HeaderandFooter}
+	[ ] $lfVerify 		= {$VerifyHeader}
+	[ ] 
+	[ ] #$sTestCaseID	= "TC_02"
+[+] Footer Elements
+	[ ] $lfTest			= {$HeaderandFooter}
+	[ ] $lfVerify 		= {$VerifyFooter}
+	[ ] 
+	[ ] #$sTestCaseID	= "TC_03"
+[+] Login
+	[ ] $lfTest			= {$LoginToEbay}
+	[ ] $lfVerify 		= {$VerifyLoginFunctionality}
+	[ ] $lfCleanup 		= {$LogoutEbay}
+	[ ] #$sTestCaseID	= "TC_04"
+[+] Logout
+	[ ] $lfTest			= {$LogoutOfEbay}
+	[ ] $lfVerify 		= {$VerifyLogoutFunctionality}
+	[ ] 
+	[ ] #$sTestCaseID	= "TC_05"
+[+] RegistrationPage Elements
+	[ ] $lfTest			= {$InvokeRegistrationPage}
+	[ ] $lfVerify 		= {$VerifyRegistrationPageElements}
+	[ ] 
+	[ ] #$sTestCaseID	= "TC_06"
+[ ] 
+[ ] 

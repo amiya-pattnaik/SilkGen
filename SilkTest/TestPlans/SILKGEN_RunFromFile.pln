@@ -1,0 +1,8 @@
+[+] EXECUTING TEST FROM FILE : D:\SILKGEN\SilkTest\Scripts\Test1.t
+	[ ] script: D:\SILKGEN\SilkTest\Scripts\Test1.t
+	[+] TestCase : T100
+		[ ] testcase: T100
+		[ ] testdata: "Amiya", 44, ""
+	[+] TestCase : T2
+		[ ] testcase: T2
+		[ ] testdata: "GIRL"

@@ -1,0 +1,79 @@
+[ ] //----------------------------------------------------------------------------------------------------------------------//
+[ ] //If the below mentioned path (script: path)is not working, Please enter the absolute path of the SILKGEN's driver function.  
+[ ] //Also if the Framework and the PprojectWorkingFolder are not in the same Drive of your local Machine //
+[ ] //----------------------------------------------------------------------------------------------------------------------//
+[ ] 
+[ ] script:		..\..\..\..\..\..\..\SILKGEN\SilkTest\Includes\SILKGEN_DriverFunc.inc
+[ ] testcase:	DriverFunction ($lfSetup, $lfTest, $lfVerify, $lfCleanup)
+[ ] 
+[ ] //----------------------------------------------------------------------------------------------------------------------//
+[ ] 
+[ ] 
+[ ] 
+[ ] //************************************* SILKGEN Framework Symbols //*************************************//
+[ ] // The following are void functions and may be used in $lfSetup, $lfTest, $lfVerify, and $lfCleanup
+[ ] $CloseAllBrowsers				= {"IE_CloseAllBrowsers", 			{}}
+[ ] $DeleteCookies 					= {"IE_DeleteCookies", 				{}}		// Internet Explorer only
+[ ] $DeleteCookiesRestartBrowser	= {"IE_DeleteCookiesRestartBrowser",{}}		// Internet Explorer only
+[ ] $VerifyWindowExists 			= {"VerifyWindowExists", {$wToVerifyExists,$iTimeout}}									// $iTimeout optional
+[ ] 
+[ ] //************************************* End ofStar Quality Toolkit Symbols *************************************//
+[ ] 
+[ ] //***************************** Generic Template Functions *****************************
+[ ] $Invoke 						= {"RunMethodInsideWindow",{$wToInvoke, "Invoke", $laInvokeArgs}}
+[ ] 
+[ ] // optional Toolkit parameters default to NULL
+[ ] $laInvokeArgs 					= NULL
+[ ] $sTestCaseID 					= ""
+[ ] $wToInvoke						= NULL
+[ ] //************************************* Default Testcase Symbols *************************************//
+[ ] $lfSetup						= {}
+[ ] $lfTest							= {}
+[ ] $lfVerify 						= {}
+[ ] $lfCleanup 						= {}
+[ ] 
+[ ] //**************************************Application dependent Symbols ********************************//
+[ ] //Invoking the Application
+[ ] $InvokeEbay     				= {"InvokeEbay",{}}
+[ ] 
+[ ] //Test Symbols
+[ ] $HeaderandFooter                = {"HeaderandFooter",	{$sSpreadsheet, $sTable, $sTestCaseID}}
+[ ] $LoginToEbay					= {"LoginToEbay",		{$sSpreadsheet, $sTable, $sTestCaseID}}
+[ ] $LogoutOfEbay					= {"LogoutOfEbay",		{$sSpreadsheet, $sTable, $sTestCaseID}}
+[ ] $InvokeRegistrationPage			= {"InvokeRegistrationPage",{}}
+[ ] 
+[ ] //Verify Symbols
+[ ] $VerifyHomePage					= {"VerifyHomePage",{$sSpreadsheet, $sTable, $sTestCaseID}}
+[ ] $VerifyHeader					= {"VerifyHeader",	{}}
+[ ] $VerifyFooter					= {"VerifyFooter",	{}}
+[ ] $VerifyLoginFunctionality		= {"VerifyLoginFunctionality",	{}}
+[ ] $VerifyLogoutFunctionality		= {"VerifyLogoutFunctionality",	{}}
+[ ] $VerifyRegistrationPageElements = {"VerifyRegistrationPageElements",{$sSpreadsheet, $sTable, $sTestCaseID}}
+[ ] 
+[ ] //Cleanup Symbols
+[ ] $LogoutEbay							= {"LogoutEbay",{}}
+[ ] 
+[ ] //Symbols for Variable used in Application
+[ ] $sSpreadsheet     = ""
+[ ] $sTable			  = ""
+[ ] 
+[ ] 
+[ ] 
+[ ] 
+[-] Ebay
+	[ ] $sSpreadsheet   = "Ebay_Data.xls"
+	[ ] $sTable			= "TestData1"
+	[ ] 
+	[ ] //Initialization step for each test case
+	[ ] $lfSetup       	= {$InvokeEbay}
+	[ ] 
+	[ ] //Cleanup step after each test case
+	[ ] $lfCleanup 		= {$CloseAllBrowsers}
+	[ ] 
+	[ ] include:Ebay_SubPlan.pln
+[ ] 
+[+] ErrorTest
+	[ ] $MyBitMapTest	= {"CloseAllBrowsers", {}}
+	[ ] 
+	[ ] $lfSetup		=	{$MyBitMapTest}
+	[ ] 
