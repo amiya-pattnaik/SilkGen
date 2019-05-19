@@ -474,7 +474,7 @@ Example:
 		// where sCUSTNO, sCUSTNAME, sCUSTCITY etc are used to map these above Columns of the SQL Table
 
 
-	STRING sFileName 	= "C:\CSI_1.1\SilkTest\Scripts\TestExcelTable.xls"
+	STRING sFileName 	= "C:\SilkGen_1.1\SilkTest\Scripts\TestExcelTable.xls"
 	ExcelColumn ExcelColumnData
 	Excel_LoadTableRow (ExcelColumnData, sFileName, sSheet, lExcelMap, "CUSTNO = 1001")
 
@@ -512,7 +512,7 @@ Example:
 		// where sCUSTNO, sCUSTNAME, sCUSTCITY etc are used to map these above Columns of the SQL Table
 
 
-	STRING sFileName 	= "C:\CSI_1.1\SilkTest\Scripts\TestExcelTable.xls"
+	STRING sFileName 	= "C:\SilkGen_1.1\SilkTest\Scripts\TestExcelTable.xls"
 	LIST OF ExcelColumn lExcelColumnData
 	Excel_LoadTableRows (lExcelColumnData, sFileName, sSheet, lExcelMap, "CUSTCITY = 'London'", 2)
 
@@ -559,7 +559,7 @@ Example:
 		// where sCUSTNO, sCUSTNAME, sCUSTCITY etc are used to map these above Columns of the SQL Table
 
 
-	STRING sFileName 	= "C:\CSI_1.1\SilkTest\Scripts\TestExcelTable.xls"
+	STRING sFileName 	= "C:\SilkGen_1.1\SilkTest\Scripts\TestExcelTable.xls"
 	STRING sFrom		= "[Employee$]"
 	STRING sJoin 		= "INNER JOIN [XEmployee$] ON [Employee$].CUSTNO = [XEmployee$].CUSTNO"
 	STRING sWhere		= "[Employee$].CUSTNO = 1001"
@@ -604,7 +604,7 @@ Example:
 		// where CUSTNO, CUSTNAME, CUSTCITY etc are the Columns name of the SQL Table
 		// where sCUSTNO, sCUSTNAME, sCUSTCITY etc are used to map these above Columns of the SQL Table
 
-	STRING sFileName 	= "C:\CSI_1.1\SilkTest\Scripts\TestExcelTable.xls"
+	STRING sFileName 	= "C:\SilkGen_1.1\SilkTest\Scripts\TestExcelTable.xls"
 	STRING sSheet		= "Employee"
 
 
@@ -937,7 +937,7 @@ Returns:     	viod
 Example:
 
 	STRING sCon_string = "DSN=SQLServerPC011663;SRVR=PC011663;UID=sa;PWD=sa"
-	 //DB_ExecuteSQLScript(sCon_string, "C:\CSI_1.1\SilkTest\Scripts\Test.sql")
+	 //DB_ExecuteSQLScript(sCon_string, "C:\SilkGen_1.1\SilkTest\Scripts\Test.sql")
 
 
 
